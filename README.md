@@ -1,4 +1,4 @@
-# Data processing for the GCBM implementation in Chile
+# Data preprocessing for the GCBM implementation in Chile
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 ## About
