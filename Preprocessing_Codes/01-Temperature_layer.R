@@ -5,19 +5,21 @@
 #------------------------------------------------------
 # Library management
 
-# we use the checkpoint package to secure reproducibility, \
-#it will download the package version of that specific dat
-if (!require(chackpoint)) install.packages("checkpoint")
+# we use the checkpoint package to secure reproducibility,
+#it will download the package version of that specific date
+if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
-checkpoint("2020-07-08") # Date in which this package was run for the last time
+checkpoint("2019-10-01") # Date of compatibility packages
 
 # Install necessary packages (if not already installed)
 if (!require(raster)) install.packages("raster")
 if (!require(ncdf4)) install.packages("ncdf4")
+if (!require(rgdal)) install.packages("rgdal")
 
 # Load the necessary packages
 library(raster) # Handle raster files
 library(ncdf4) # Handle netCDF files
+library(rgdal) # gdal library
 
 #----------------------------------------------------
 # Parameters
@@ -49,7 +51,6 @@ output_gcbm <- "./Output_Files/layers/raw/environment"
 # Product of average mean temperature (res: 0.005 degress), elaborated bu the CR2 climate research center
 layer_temp <- "CR2MET_v1.3_tmonth_1979_2016_005deg.nc"
 
-
 #----------------------------
 
 # Read the first layer of the netCDF file
@@ -70,6 +71,8 @@ final_band <- ((final_year_temp - initial_year_temp) * 12) + 12
 
 # Progress bar
 pb <- txtProgressBar(min = initial_band, max = final_band, initial = 1, style = 3)
+
+print("Processing temperature raster dataset")
 
 for (i in initial_band:final_band) {
 
@@ -99,8 +102,11 @@ mean_temp <- sum_temp / count
 plot(mean_temp)
 
 # Check the maximum and minimum temprature to see if everything is OK
-cellStats(mean_temp, stat = "max")
-cellStats(mean_temp, stat = "min")
+print(paste("Maximum temprature:",cellStats(mean_temp, stat = "max")))
+print(paste("Minimum temprature:",cellStats(mean_temp, stat = "min")))
 
 # Escribir el raster
-writeRaster(mean_temp, paste0(output_gcbm, "/Temp_average_CR2_1997_2016.tif"))
+writeRaster(mean_temp, paste0(output_gcbm, "/Temp_average_CR2_1997_2016.tif"),overwrite=TRUE)
+
+print(paste("Average temprature created, file written in:", paste0(output_gcbm, "/Temp_average_CR2_1997_2016.tif")))
+
