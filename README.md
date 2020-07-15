@@ -15,6 +15,34 @@ Disclaimer: The results derived from the use of this algorithms do not necessari
 
 This repo was tested using R 3.6.3 (64-bit) on a Windows 10 OS
 
+## Run instructions
+
+1. Clone or download the repo
+2. Go to "releases"" and download the Input data (the expected output is also available)
+3. Unzip the input data folder into the project folder
+
+To make sure the R codes will work as expected, make sure you have the following directory structure
+
+``` bash
+├── Preprocessing_Codes
+├── Input_Files
+│   ├── Growth                # Excel spreadsheet with growth data
+│   ├── LUC                   # Trazabilidad (Land use) data
+│   ├── SOC                   # Soil Organic carbon data
+|   └── Temperature           # Temperature raw data (NetCDF)
+├── Output_Files
+│   ├── input_database
+│   └── layers
+│     └── raw 
+        ├── disturbances
+│       ├── environment                   
+|       └── inventory
+├── README.md
+└── ...
+```
+
+4. Run the processing codes inside the Preprocessing_codes folder in order
+
 ## How to Get Involved?  
 
 moja global welcomes a wide range of contributions as explained in [Contributing document](https://github.com/moja-global/About-moja-global/blob/master/CONTRIBUTING.md) and in the [About moja-global Wiki](https://github.com/moja-global/.github/wiki).  
