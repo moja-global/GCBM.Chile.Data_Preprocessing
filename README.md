@@ -1,14 +1,19 @@
-# Data processing for the GCBM implementation in Chile (los Rios Region)
+# Data processing for the GCBM implementation in Chile
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+
+## About
 
 This repo contains the data preprocessing algorithms performed by Chile in order to preprocess the official data to fit with the Generic Carbon Budget Model (GCBM) format. This products consists in a proof of concept and a work of progress, that uses the Los Rios Region, in southern Chile, as pilot area.
 
 The preprocessing steps were designed to mimic the data preparation conducted by Chile in the elaboration of its Forest Reference Emissions Level / Forest Reference Level, [FREL/FRL](https://redd.unfccc.int/files/chile_mod_sub_final_01032017_english.pdf), submitten in August 31th, 2016.
 
-
 The methods and results of this work were compiled into the [technical document](https://moja.global/wp-content/uploads/2020/04/Chile_GCBM_Pilot_Technical_Document.pdf) "Modelling forest carbon dynamics for REDD+ using the Generic Carbon Budget Model (GCBM)", were more details can be found.
 
 Disclaimer: The results derived from the use of this algorithms do not necessarily reflect the positions of the Government of Chile for REDD+ accounting or any other purpose.
+
+## Environment
+
+This repo was tested using R 4.0.2 on a Windows 10 machine
 
 ## How to Get Involved?  
 
