@@ -1,5 +1,5 @@
 # ----------------------------
-# Export the Excel spreadsheet with growth curves to accepted csv format
+# Create the inventory layer (initial layer)
 # ----------------------------
 
 #------------------------------------------------------
@@ -42,22 +42,22 @@ output_gcbm <- "./Output_Files/layers/raw/inventory"
 # Parameters
 
 # inital year of model execution
-anio_inventario <- 1997
+inventory_year <- 1997
 
 # ---------------------------
 # Layer names
 
 # Trazabilidad (land use data)
-capa_traza <- "Trazabilidad_R_LosRios_2016_V4"
+layer_traza <- "Trazabilidad_R_LosRios_2016_V4"
 
 # Soil organic carbon data from FAO (GSOC map version 1.5.0)
-capa_SOC<-"SOC_South_Chile_GSOCmap_v1_5_0.tiff"
+layer_SOC<-"SOC_South_Chile_GSOCmap_v1_5_0.tiff"
 
 #-----------------------------------------------------------------
 # generate the inventory layer from the trazabilidad file
 
 # Read the Trazabilidad file
-traza <- st_read(dsn = input_traza, layer = capa_traza)
+traza <- st_read(dsn = input_traza, layer = layer_traza)
 
 # Filter the database (Optional)
 # Include the polygons that were forest ar some point of the time series of data (T1, T2, T3, T4)
@@ -120,7 +120,7 @@ traza<-st_transform(traza, "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0
 
 # Extract SOC data
 # Load SOC data
-SOC <- raster(paste0(input_SOC, "/", capa_SOC))
+SOC <- raster(paste0(input_SOC, "/", layer_SOC))
 
 # Extract the soc data by calculating the mean in each polygon
 traza$CdelSuelo <- exact_extract(SOC, traza, "mean")
@@ -143,8 +143,8 @@ traza$LC_Curr<-ifelse(traza$Tipofor %in% c("No forestal", "Plantacion"),"CL","FL
 traza<-traza[,c("IDtra","Tipofor","Estruc","Origen","Edad","CdelSuelo","LC_Hist","LC_Curr")]
 
 # Write shapefile
-write_sf(traza, paste0(output_gcbm, "/inventario_97_v2.shp"))
+write_sf(traza, paste0(output_gcbm, "/inventory_LosRios.shp"))
 
-print(paste("Inventory layer written in",paste0(output_gcbm, "/inventario_97_v2.shp")))
+print(paste("Inventory layer written in",paste0(output_gcbm, "/inventory_LosRios.shp")))
 
 
