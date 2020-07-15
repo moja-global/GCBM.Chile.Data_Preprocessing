@@ -25,7 +25,7 @@ library(ncdf4) # Handle netCDF files
 # Initial year of execution of the model
 initial_year <- 1997
 
-# Las year of execution of the model
+# Last year of execution of the model
 final_year <- 2016
 
 # Initial year of the CR2 product
@@ -41,7 +41,7 @@ final_year_temp <- 2016
 input_temp <- "./Input_Files/Temperature"
 
 # Output folder
-output_gcbm <- "./Output_files/layers/raw/environment"
+output_gcbm <- "./Output_Files/layers/raw/environment"
 
 # ---------------------------
 # File names
