@@ -5,11 +5,11 @@
 #------------------------------------------------------
 # Library management
 
-# we use the checkpoint package to secure reproducibility, \
-#it will download the package version of that specific dat
-if (!require(chackpoint)) install.packages("checkpoint")
+# we use the checkpoint package to secure reproducibility, 
+# it will download the package version of that specific date
+if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
-checkpoint("2020-07-08") # Date in which this package was run for the last time
+checkpoint("2019-10-01", scanForPackages = FALSE) # Date of compatibility packages
 
 # Install necessary packages (if not already installed)
 if (!require(openxlsx)) install.packages("openxlsx")
@@ -39,6 +39,6 @@ growth_excel <- "Growth_Curves_LosRios.xlsx"
 growth <- read.xlsx(paste0(input_growth,"/",growth_excel))
 
 # Write csv file
-write.xlsx(growth,paste0(output_gcbm,"/Growth_Curves_LosRios.csv",))
+write.csv(growth,paste0(output_gcbm,"/Growth_Curves_LosRios.csv"))
 
 
