@@ -13,7 +13,7 @@ Disclaimer: The results derived from the use of this algorithms do not necessari
 
 ## Environment
 
-This repo was tested using R 4.0.2 on a Windows 10 machine
+This repo was tested using R 3.6.3 (64-bit) on a Windows 10 OS
 
 ## How to Get Involved?  
 
