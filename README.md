@@ -9,7 +9,7 @@ The preprocessing steps were designed to mimic the data preparation conducted by
 
 The methods and results of this work were compiled into the [technical document](https://moja.global/wp-content/uploads/2020/04/Chile_GCBM_Pilot_Technical_Document.pdf) "Modelling forest carbon dynamics for REDD+ using the Generic Carbon Budget Model (GCBM)", were more details can be found.
 
-Disclaimer: The results derived from the use of this algorithms do not necessarily reflect the positions of the Government of Chile for REDD+ accounting or any other purpose.
+**Disclaimer**: The results derived from the use of this algorithms do not necessarily reflect the positions of the Government of Chile for REDD+ accounting or any other purpose.
 
 ## Environment
 
@@ -24,7 +24,6 @@ This repo was tested using R 3.6.3 (64-bit) on a Windows 10 OS
 To make sure the R codes will work as expected, make sure you have the following directory structure
 
 ``` bash
-├── Preprocessing_Codes
 ├── Input_Files
 │   ├── Growth                # Excel spreadsheet with growth data
 │   ├── LUC                   # Trazabilidad (Land use) data
@@ -38,7 +37,7 @@ To make sure the R codes will work as expected, make sure you have the following
 │       ├── environment                   
 |       └── inventory
 ├── README.md
-└── ...
+└── ... (Processing codes)
 ```
 
 4. Run the processing codes inside the Preprocessing_codes folder in order
