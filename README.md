@@ -15,11 +15,12 @@ The methods and results of this work were compiled into the [technical document]
 
 This repo was tested using R 3.6.3 (64-bit) on a Windows 10 OS
 
-## Run instructions
+## Instructions
 
-1. Clone or download the repo
-2. Go to "releases"" and download the Input data (the expected output is also available)
-3. Unzip the input data folder into the project folder
+1. Install R 3.6.3 and RStudio
+2. Clone or download the repo
+3. Go to "releases"" and download the Input data (the expected output is also available)
+4. Unzip the input data folder into the project folder
 
 To make sure the R codes will work as expected, make sure you have the following directory structure
 
@@ -40,7 +41,8 @@ To make sure the R codes will work as expected, make sure you have the following
 └── ... (Processing codes)
 ```
 
-4. Run the processing codes inside the Preprocessing_codes folder in order
+5. Create your own project or open the GCBM.Chile_data_preprocessing.Rproj file in RStudio
+6. Run the processing codes inside the Preprocessing_codes folder in order
 
 (I strongly reccomend the use of the RStudio IDE to run the R codes)
 
