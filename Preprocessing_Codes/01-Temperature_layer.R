@@ -9,12 +9,8 @@
 # it will download the package version of that specific date
 if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
+# The checkpoint command will scan and install the packages used in the entire project
 checkpoint("2019-10-01") # Date of compatibility packages
-
-# Install necessary packages (if not already installed)
-if (!require(raster)) install.packages("raster")
-if (!require(ncdf4)) install.packages("ncdf4")
-if (!require(rgdal)) install.packages("rgdal")
 
 # Load the necessary packages
 library(raster) # Handle raster files
