@@ -6,7 +6,7 @@
 # Library management
 
 # we use the checkpoint package to secure reproducibility,
-#it will download the package version of that specific date
+# it will download the package version of that specific date
 if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
 checkpoint("2019-10-01") # Date of compatibility packages

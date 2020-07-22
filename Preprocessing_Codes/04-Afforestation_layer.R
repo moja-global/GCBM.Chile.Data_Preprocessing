@@ -32,7 +32,7 @@ library(exactextractr) # extract raster values to a shape
 input_traza <- "./Input_Files/LUC"
 
 # Folder of the output data
-output_gcbm <- "./Output_Files/layers/raw/inventory"
+output_gcbm <- "./Output_Files/layers/raw/disturbances"
 
 # ---------------------------
 # Layer names
@@ -148,7 +148,7 @@ afor_t3<-afor_t3[,c("year","Perturb","Tipofor_pa","Estruc_pa")]
 
 
 #_----------------------------------------------------------
-#Same with T4, the only thing that changes is that the Matorral Arborescente forest type is nos included as Afforestation
+# Same with T4, the only thing that changes is that the Matorral Arborescente forest type is nos included as Afforestation
 
 afor_t4<-dplyr::filter(
   traza,
@@ -202,7 +202,9 @@ afor_total<-st_transform(afor_total, "+proj=longlat +datum=WGS84 +ellps=WGS84 +t
 afor_total$year<-as.integer(afor_total$year)
 
 # Write the shapefile
-write_sf(afor_total, paste0(output_gcbm, "/afforestation_LosRios.shp"))
+write_sf(afor_total, paste0(output_gcbm, "/afforestation_LosRios.shp"),overwrite=TRUE)
 
+print(paste("Afforestation layer written in",paste0(output_gcbm, "/afforestation_LosRios.shp")))
 
+??write_sf
 

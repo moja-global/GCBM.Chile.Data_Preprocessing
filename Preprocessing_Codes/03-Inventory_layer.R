@@ -143,7 +143,7 @@ traza$LC_Curr<-ifelse(traza$Tipofor %in% c("No forestal", "Plantacion"),"CL","FL
 traza<-traza[,c("IDtra","Tipofor","Estruc","Origen","Edad","CdelSuelo","LC_Hist","LC_Curr")]
 
 # Write shapefile
-write_sf(traza, paste0(output_gcbm, "/inventory_LosRios.shp"))
+write_sf(traza, paste0(output_gcbm, "/inventory_LosRios.shp"),overwrite=TRUE)
 
 print(paste("Inventory layer written in",paste0(output_gcbm, "/inventory_LosRios.shp")))
 
