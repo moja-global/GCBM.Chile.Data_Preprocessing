@@ -45,8 +45,6 @@ To make sure the R codes will work as expected, make sure you have the following
 5. Create your own project or open the GCBM.Chile_data_preprocessing.Rproj file in RStudio
 6. Run the processing codes inside the Preprocessing_codes folder in order
 
-(I strongly reccomend the use of the RStudio IDE to run the R codes)
-
 ## How to Get Involved?  
 
 moja global welcomes a wide range of contributions as explained in [Contributing document](https://github.com/moja-global/About-moja-global/blob/master/CONTRIBUTING.md) and in the [About moja-global Wiki](https://github.com/moja-global/.github/wiki).  
