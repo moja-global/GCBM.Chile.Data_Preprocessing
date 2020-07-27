@@ -7,12 +7,8 @@
 
 # we use the checkpoint package to secure reproducibility, 
 # it will download the package version of that specific date
-if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
 checkpoint("2019-10-01", scanForPackages = FALSE) # Date of compatibility packages
-
-# Install necessary packages (if not already installed)
-if (!require(openxlsx)) install.packages("openxlsx")
 
 # Load the necessary packages
 library(openxlsx) # Handle exel files
@@ -40,5 +36,7 @@ growth <- read.xlsx(paste0(input_growth,"/",growth_excel))
 
 # Write csv file
 write.csv(growth,paste0(output_gcbm,"/Growth_Curves_LosRios.csv"))
+
+print(paste("Growth curves file created, file written in:", paste0(output_gcbm, "/Growth_Curves_LosRios.csv")))
 
 

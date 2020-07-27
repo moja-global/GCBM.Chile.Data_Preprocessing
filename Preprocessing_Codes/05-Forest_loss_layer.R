@@ -7,16 +7,8 @@
 
 # we use the checkpoint package to secure reproducibility, 
 # it will download the package version of that specific date
-if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
 checkpoint("2019-10-01", scanForPackages = FALSE) # Date of compatibility packages
-
-# Install necessary packages (if not already installed)
-if (!require(sf)) install.packages("sf")
-if (!require(dplyr)) install.packages("dplyr")
-if (!require(raster)) install.packages("raster")
-if (!require(rgdal)) install.packages("rgdal")
-if (!require(exactextractr)) install.packages("exactextractr")
 
 # Load the necessary packages
 library(sf) # simple feature package for shape processing
