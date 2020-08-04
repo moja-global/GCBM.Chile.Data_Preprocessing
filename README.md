@@ -88,7 +88,9 @@ The following people are Maintainers Reviewers Ambassadors or Coaches
 
 <table>
   <tr>
-    <td align="center"><a href="http://www.juliancabezas.com"><img src="https://avatars1.githubusercontent.com/u/17553010?v=4" width="100px;" alt=""/><br /><sub><b>Julián Cabezas</b></sub></a><br /><a href="https://github.com/moja-global/GCBM.Chile.Data_Preprocessing/commits?author=juliancabezas" title="Code">💻</a></td>
+    <td align="center"><a href="http://moja.global"><img src="https://avatars1.githubusercontent.com/u/19564969?v=4" width="100px;" alt=""/><br /><sub><b>moja global</b></sub></a><br /><a href="#projectManagement-moja-global" title="Project Management">📆</a></td>
+    <td align="center"><a href="http://www.juliancabezas.com"><img src="https://avatars1.githubusercontent.com/u/17553010?v=4" width="100px;" alt=""/><br /><sub><b>Julián Cabezas</b></sub></a><br /><a href="https://github.com/moja-global/GCBM.Chile.Implementation/commits?author=juliancabezas" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mfellows"><img src="https://avatars0.githubusercontent.com/u/8548157?v=4" width="100px;" alt=""/><br /><sub><b>Max Fellows</b></sub></a><br /><a href="https://github.com/moja-global/GCBM.Chile.Implementation/commits?author=mfellows" title="Code">💻</a></td>
   </tr>
 </table>
   
