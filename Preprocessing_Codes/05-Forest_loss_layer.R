@@ -1,6 +1,8 @@
 # ----------------------------
 # Create the deforestation and substitution layers
 # ----------------------------
+print("Creating the forest loss (deforestation and substitution) layer")
+
 
 #------------------------------------------------------
 # Library management
@@ -176,7 +178,7 @@ dist_total$year<-as.integer(dist_total$year)
 # Write shapefile
 write_sf(dist_total, paste0(output_gcbm, "/forest_loss_LosRios.shp"))
 
-print(paste("Forest loss layer written in",paste0(output_gcbm, "/afforestation_LosRios.shp")))
+print(paste("Forest loss layer written in",paste0(output_gcbm, "/forest_loss_LosRios.shp")))
 
 
 

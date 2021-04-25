@@ -1,6 +1,7 @@
 # ----------------------------
 # Create the inventory layer (initial layer)
 # ----------------------------
+print("Creating the inventory layer (initial year)")
 
 #------------------------------------------------------
 # Library management
@@ -16,6 +17,8 @@ library(dplyr) # database handling
 library(raster) # raster file processing
 library(rgdal) # gdal library
 library(exactextractr) # extract raster values to a shape
+
+
 
 
 # ----------------------------------------------------
@@ -53,13 +56,13 @@ traza <- st_read(dsn = input_traza, layer = layer_traza)
 
 # Filter the database (Optional)
 # Include the polygons that were forest ar some point of the time series of data (T1, T2, T3, T4)
-traza<- dplyr::filter(
-  traza,
-  T1 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")|
-    T2 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")|
-    T3 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")|
-    T4 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")
-)
+# traza<- dplyr::filter(
+#   traza,
+#   T1 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")|
+#     T2 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")|
+#     T3 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")|
+#     T4 %in% c("0403", "040203", "040202", "040204", "040201", "0402","0304")
+# )
 
 #---------------------------------------------------------
 # Assing classfiers

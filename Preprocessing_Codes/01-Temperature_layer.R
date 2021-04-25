@@ -7,10 +7,8 @@
 
 # we use the checkpoint package to secure reproducibility,
 # it will download the package version of that specific date
-if (!require(checkpoint)) install.packages("checkpoint")
 library("checkpoint")
-# The checkpoint command will scan and install the packages used in the entire project
-checkpoint("2019-10-01") # Date of compatibility packages
+checkpoint("2019-10-01", scanForPackages = FALSE) # Date of compatibility packages
 
 # Load the necessary packages
 library(raster) # Handle raster files
@@ -95,7 +93,7 @@ for (i in initial_band:final_band) {
 mean_temp <- sum_temp / count
 
 # Plot result
-plot(mean_temp)
+#plot(mean_temp)
 
 # Check the maximum and minimum temprature to see if everything is OK
 print(paste("Maximum temprature:",cellStats(mean_temp, stat = "max")))

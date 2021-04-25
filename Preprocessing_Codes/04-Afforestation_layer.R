@@ -1,6 +1,8 @@
 # ----------------------------
 # Create the afforestation layer: Land use changes from non forest to forest
 # ----------------------------
+print("Creating the afforestation layer (planting of new forests)")
+
 
 #------------------------------------------------------
 # Library management
@@ -185,7 +187,7 @@ afor_t4<-afor_t4[,c("year","Perturb","Tipofor_pa","Estruc_pa")]
 afor_total<-rbind(afor_t2,afor_t3,afor_t4)
 
 # Add Origin classifer type to distinguish the afforestation forest (aumento)
-afor_total$Origen_pa<-"Bosque Aumento"
+afor_total$Origen_pa<-ifelse(afor_total$year>2001 & afor_total$year<2014, "Bosque Aumento FREL","Bosque Aumento preFREL")
 
 # Project to latlong
 afor_total<-st_transform(afor_total, "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
