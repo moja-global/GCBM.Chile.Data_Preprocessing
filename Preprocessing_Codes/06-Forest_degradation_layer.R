@@ -258,11 +258,6 @@ for (i in 1:(n_quantiles*2)) {
 # Write the csv that will be inserted into the gcbm_input database
 write.csv(as.data.frame(disturbance_matrix_association_full),"./Output_Files/input_database/Degradation_disturbance_matrix_association.csv",row.names = FALSE)
 
-
-
-
-
-
 # Create the disturbance matrix values csv
 # This dataframe includes the proportion of each reservoir that goes to CO2
 

@@ -23,7 +23,7 @@ age_stop_growth <- 100
 # Maximum age reflected in the growth curves
 age_max_curves <- 200
 
-# Annual periodic increment tables (m3/ha/year), this is increments in commertial wood (aboveground)
+# Annual periodic increment tables (m3/ha/year), this is increments in commercial wood (aboveground)
 growth_table <- tibble::tribble(
         ~TipoFor_classifier, ~Annual_Growth_Renoval, ~Annual_Growth_AdultoRenoval,
                    "Alerce",                   0.45,                         0.45,
@@ -73,7 +73,7 @@ AIDBSPP <- "Red alder"
 
 counter <- 1
 
-# I am going to create a growth curve for each bombination of forest type (Tipofor) and structure (Estruc)
+# I am going to create a growth curve for each combination of forest type (Tipofor) and structure (Estruc)
 for (Tipofor in forest_types){
   for (Estruc in structures){
     
@@ -249,7 +249,7 @@ growth <- rbind(growth,growth_curve)
 
 
 #----------------------------------------
-# Assing names to the dataframe
+# Assign names to the dataframe
 seq_ages <- paste0("A",0:age_max_curves)
 column_names <- c("Tipofor","Estruc","Origen","AIDBSPP",seq_ages)
 growth <- as.data.frame(growth)
@@ -258,7 +258,7 @@ names(growth) <- column_names
 # Convert volume values to numeric
 growth[seq_ages] <- lapply(growth[seq_ages],function(x) as.numeric(as.character(x)))
 
-# Convert clasiffiers to text
+# Convert classifiers to text
 growth[c("Tipofor","Estruc","Origen","AIDBSPP")] <- lapply(growth[c("Tipofor","Estruc","Origen","AIDBSPP")],function(x) as.character(x))
 
 # Write csv file

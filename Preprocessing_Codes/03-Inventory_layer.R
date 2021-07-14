@@ -65,17 +65,17 @@ traza <- st_read(dsn = input_traza, layer = layer_traza)
 # )
 
 #---------------------------------------------------------
-# Assing classfiers
+# Assign classifiers
 
-# Tipofor clasiffier, it refers to the local classification of Forest types (Donoso, 1981)
+# Tipofor classifier, it refers to the local classification of Forest types (Donoso, 1981)
 
 # Get the forest types from the 1997 map
 traza$Tipofor <- as.character(traza$T_F_97)
 
-# Assing the "Bosque Mixto" forest type from the T1 column
+# Assign the "Bosque Mixto" forest type from the T1 column
 traza$Tipofor <- ifelse(traza$T1 == "0403", "Bosque Mixto", as.character(traza$Tipofor))
 
-# Assing the "Matorral Arborescente" forest type from the T1 column
+# Assign the "Matorral Arborescente" forest type from the T1 column
 traza$Tipofor <- ifelse(traza$T1 == "0304", "Matorral Arborescente", as.character(traza$Tipofor))
 
 # All polygons without a forest types will be leaved as "No Forestal" (nonforest)
@@ -110,7 +110,7 @@ traza$Origen<-ifelse(traza$Tipofor %in% c("No forestal", "Plantaciones"), "No fo
 # I will leave all ages as 100 for the initial forest
 traza$Edad <- ifelse(!(traza$Tipofor %in% c("No forestal", "Plantacion")), 100, 0)
 
-# ReProject shapefile to lat long
+# Reproject shapefile to lat long
 traza<-st_transform(traza, "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0")
 
 # Extract SOC data
@@ -120,10 +120,10 @@ SOC <- raster(paste0(input_SOC, "/", layer_SOC))
 # Extract the soc data by calculating the mean in each polygon
 traza$CdelSuelo <- exact_extract(SOC, traza, "mean")
 
-# Asignn 100 if I have an NA
+# Assign 100 if I have an NA (Optional)
 traza$CdelSuelo <- ifelse(is.na(traza$CdelSuelo), 100, traza$CdelSuelo)
 
-# If the GCBM detects a SOC greater than 0 in a forest pixel it will not work (bug), most reacent versions have fixed this bug
+# If the GCBM detects a SOC greater than 0 in a forest pixel it will not work (bug), most recent versions have fixed this bug
 traza$CdelSuelo <- ifelse(!(traza$Tipofor %in% c("No forestal", "Plantacion")), 0, traza$CdelSuelo)
 
 # Historic and current land use assumptions

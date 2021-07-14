@@ -3,7 +3,6 @@
 # ----------------------------
 print("Creating the afforestation layer (planting of new forests)")
 
-
 #------------------------------------------------------
 # Library management
 
@@ -186,7 +185,7 @@ afor_t4<-afor_t4[,c("year","Perturb","Tipofor_pa","Estruc_pa")]
 # Get the afforestation layers together in a single file
 afor_total<-rbind(afor_t2,afor_t3,afor_t4)
 
-# Add Origin classifer type to distinguish the afforestation forest (aumento)
+# Add Origin classier type to distinguish the afforestation forest (aumento)
 afor_total$Origen_pa<-ifelse(afor_total$year>2001 & afor_total$year<2014, "Bosque Aumento FREL","Bosque Aumento preFREL")
 
 # Project to latlong

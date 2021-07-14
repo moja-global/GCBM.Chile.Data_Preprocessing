@@ -93,13 +93,13 @@ for (i in initial_band:final_band) {
 mean_temp <- sum_temp / count
 
 # Plot result
-#plot(mean_temp)
+# plot(mean_temp)
 
 # Check the maximum and minimum temprature to see if everything is OK
 print(paste("Maximum temprature:",cellStats(mean_temp, stat = "max")))
 print(paste("Minimum temprature:",cellStats(mean_temp, stat = "min")))
 
-# Escribir el raster
+# Write raster file
 writeRaster(mean_temp, paste0(output_gcbm, "/Temp_average_CR2_1997_2016.tif"),overwrite=TRUE)
 
 print(paste("Average temprature created, file written in:", paste0(output_gcbm, "/Temp_average_CR2_1997_2016.tif")))
