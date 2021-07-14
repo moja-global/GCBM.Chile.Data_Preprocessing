@@ -39,11 +39,12 @@ To make sure the R codes will work as expected, make sure you have the following
 |       └── inventory
 ├── Processing_codes
 ├── README.md
+├── run_all.R
 └── ...
 ```
 
 5. Create your own project or open the GCBM.Chile_data_preprocessing.Rproj file in RStudio
-6. Run the processing codes inside the Preprocessing_codes folder in order
+6. Run the processing codes inside the Preprocessing_codes folder in order, alternatively, run the run_all.R code to run all the preprocessing codes.
 
 ## How to Get Involved?  
 
