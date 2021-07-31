@@ -7,7 +7,7 @@ This repo contains the data preprocessing algorithms performed by Chile in order
 
 The preprocessing steps were designed to mimic the data preparation conducted by Chile in the elaboration of its Forest Reference Emissions Level / Forest Reference Level, [FREL/FRL](https://redd.unfccc.int/files/chile_mod_sub_final_01032017_english.pdf), submitted in August 31th, 2016.
 
-The methods and results of this work were compiled into the [technical document](https://moja.global/wp-content/uploads/2020/04/Chile_GCBM_Pilot_Technical_Document.pdf) "Modelling forest carbon dynamics for REDD+ using the Generic Carbon Budget Model (GCBM)", were more details can be found.
+The methods and results of this work were compiled into the [technical document](https://www.researchgate.net/publication/341041237_Modelling_forest_carbon_dynamics_for_REDD_using_the_Generic_Carbon_Budget_Model_GCBM_Pilot_Project_Los_Rios_Region_-_Chile) "Modelling forest carbon dynamics for REDD+ using the Generic Carbon Budget Model (GCBM)", were more details can be found.
 
 **Disclaimer**: The results derived from the use of this algorithms do not necessarily reflect the positions of the Government of Chile for REDD+ accounting or any other purpose.
 
