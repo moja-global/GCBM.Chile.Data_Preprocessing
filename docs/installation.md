@@ -49,6 +49,6 @@ After installing, R Studio and R programming language, start the R Studio IDE an
 With the initial setup complete, you are now ready to run the pre-processing algorithm code.
 
 1.  From the R Studio IDE, select the `run_all.R` file and click on `Run` to run all the pre-processing code.
-2.  Choose the individual files in the `Preprocessing_Codes` to run them singularly. Make sure to install the R packages as suggested by the R Studio.
+2.  Optionally, choose the individual files in the `Preprocessing_Codes` to run them singularly. Make sure to install the R packages as suggested by the R Studio.
 
 With the repository and tools set up on your workstation, you can now either edit existing code or prepare local datasets for a GCBM run using R.
