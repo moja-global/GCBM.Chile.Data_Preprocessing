@@ -14,6 +14,7 @@ The methods and results of this work were compiled into the [technical document]
 ## Documentation
 
 - [Installing GCBM Chile data pre-processing project](docs/installation.md)
+- [Understanding Preprocessing Codes](docs/understanding-preprocessing-codes.md)
 
 ## How to Get Involved?
 
