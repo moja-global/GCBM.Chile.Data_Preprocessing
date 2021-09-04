@@ -11,11 +11,6 @@ The preprocessing algorithms are designed to replicate the data preparation cond
 
 The methods and results of this work were compiled into the [technical document](https://www.researchgate.net/publication/341041237_Modelling_forest_carbon_dynamics_for_REDD_using_the_Generic_Carbon_Budget_Model_GCBM_Pilot_Project_Los_Rios_Region_-_Chile) **"Modelling forest carbon dynamics for REDD+ using the Generic Carbon Budget Model (GCBM)"**, where more details can be found.
 
-## Documentation
-
-- [Installing GCBM Chile data pre-processing project](docs/installation.md)
-- [Understanding Preprocessing Codes](docs/understanding-preprocessing-codes.md)
-
 ## How to Get Involved?
 
 moja global welcomes a wide range of contributions as explained in [Contributing document](https://github.com/moja-global/About-moja-global/blob/master/CONTRIBUTING.md) and in the [About moja-global Wiki](https://github.com/moja-global/.github/wiki).
